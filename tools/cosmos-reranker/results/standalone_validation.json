@@ -1,0 +1,44 @@
+{
+  "grouped_loss_cases": 12,
+  "max_loss_absolute_difference": 0.0,
+  "max_gradient_absolute_difference": 0.0,
+  "bf16_projection_value_and_gradient": "exact",
+  "structured_attribute_value_and_gradient": "exact",
+  "dataset_examples_compared": 1280,
+  "sampler_rank_epoch_cases": 24,
+  "source_commit": "4a5105c3cd6815dc3333df2de75771f050c5fc8d",
+  "runtime_base": "89b1fdd89441964868a8767ee964e1e41a85ea68",
+  "distributed_training": {
+    "steps": 2,
+    "data_parallel_ranks_per_run": 4,
+    "global_candidate_batch": 640,
+    "microbatch": 20,
+    "fixture_rows": 1280,
+    "source_and_release_loss_max_absolute_difference": 0.0,
+    "checkpoint_tensor_comparison": {
+      "language": {
+        "tensor_count": 504,
+        "max_absolute_difference": 3.325939178466797e-05,
+        "relative_l2": 3.1815188478757435e-05
+      },
+      "visual": {
+        "tensor_count": 28,
+        "max_absolute_difference": 8.463859558105469e-06,
+        "relative_l2": 6.957776386434287e-06
+      }
+    },
+    "complete_training_checkpoint_and_joint_adapter_export": true,
+    "note": "Short integration check uses a two-step schedule; it is not a repeat of the full 8000-step reproduction. GPU gradients and exported adapter tensors are close, not bit-identical."
+  },
+  "inference": {
+    "candidate_count": 20,
+    "same_ranking": true,
+    "max_absolute_score_difference": 0.03125012665987015,
+    "supplied_step8000_checkpoint": true
+  },
+  "unit_tests": {
+    "passed": 11
+  },
+  "lint": "ruff 0.12.7 check and format",
+  "editable_install": "passed in isolated /tmp venv"
+}

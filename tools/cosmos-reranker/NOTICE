@@ -1,0 +1,17 @@
+Cosmos Nano reranker and PAS step-8000 fine-tuning recipe
+Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+The training, data preparation, and runtime patch are derived from the PAS
+reproduction at jiayin-nvidia/cosmos-rl commit
+4a5105c3cd6815dc3333df2de75771f050c5fc8d. The runtime base is NVIDIA Cosmos RL
+commit 89b1fdd89441964868a8767ee964e1e41a85ea68 (Apache-2.0).
+
+The Cosmos reranker, SigLIP2 loader, and PAS evaluator are derived from the
+NVIDIA rerank_experiment sources captured in that reproduction commit.
+Their source checkout was at c06e589 with local PAS modifications.
+Only the Cosmos scorer and dependencies used by this recipe are included.
+
+The supplied step-8000 adapters were fine-tuned from the clean Cosmos3-Nano
+VLM export on PAS V3.1 using the recipe in README.md. Model artifacts retain
+the Cosmos model's OpenMDW-1.1 terms; see checkpoints/step8000/LICENSE.model.
+The model's origin is https://huggingface.co/nvidia/Cosmos3-Nano.

@@ -1,0 +1,2 @@
+# Unified diff context lines contain a required leading space.
+runtime/cosmos_rl.patch -whitespace
